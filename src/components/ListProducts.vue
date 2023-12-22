@@ -1,17 +1,20 @@
 <script>
+import DcJumbo from "./DcJumbo.vue";
 export default {
   name: "ListProducts",
+  components: {
+    DcJumbo,
+  },
 };
 </script>
 
 <template>
-  <h2>CONTENUTO</h2>
+  <DcJumbo />
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/_mixins.scss" as *;
 h2 {
-  @include center();
   color: white;
 }
 </style>

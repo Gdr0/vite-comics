@@ -1,62 +1,7 @@
 <script>
 export default {
   name: "AppHeader",
-  data() {
-    return {
-      links: [
-        {
-          text: "Characters",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Comics",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Movies",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "TV",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Games",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Collectibles",
-          url: "#",
-          current: true,
-        },
-        {
-          text: "Video",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Fans",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "News",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Shop",
-          url: "#",
-          current: false,
-        },
-      ],
-    };
-  },
+  props: { links: Array },
 };
 </script>
 
@@ -68,7 +13,7 @@ export default {
       </div>
       <nav class="menuNav">
         <ul>
-          <li v-for="link in links">
+          <li v-for="(link, i) in links" :key="i">
             <a href="" :class="link.current ? 'active' : ''">{{ link.text }}</a>
           </li>
         </ul>
@@ -82,7 +27,7 @@ export default {
 
 header {
   background-color: white;
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding: 10px 0;
   .container {
     @include between();
@@ -100,7 +45,8 @@ header {
         font-size: 12px;
         &.active,
         &:hover {
-          color: #4941fe;
+          color: #0282f9;
+          border-bottom: solid 5px #0282f9;
         }
       }
     }

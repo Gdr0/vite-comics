@@ -34,10 +34,10 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/_mixins.scss" as *;
 div {
-  background-color: #4941fe;
+  background-color: #0282f9;
   ul {
     list-style: none;
-    margin: 40px;
+
     padding: 30px;
     @include center();
     gap: 30px;
