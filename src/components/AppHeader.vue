@@ -64,7 +64,7 @@ export default {
   <header>
     <div class="container">
       <div class="logo">
-        <img src="" alt="" />
+        <img src="/img/dc-logo.png" alt="" />
       </div>
       <nav class="menuNav">
         <ul>
@@ -83,6 +83,7 @@ export default {
 header {
   background-color: white;
   margin: 20px 0;
+  padding: 10px 0;
   .container {
     @include between();
     @include center(horizontal);
