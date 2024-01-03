@@ -1,6 +1,7 @@
 <script>
 export default {
   name: "DcElementsList",
+  props: { links: Array },
 };
 </script>
 
@@ -8,23 +9,9 @@ export default {
   <div>
     <div class="container">
       <ul>
-        <li>
-          <a href="">dc</a>
-        </li>
-        <li>
-          <a href="">dc</a>
-        </li>
-        <li>
-          <a href="">dc</a>
-        </li>
-        <li>
-          <a href="">dc</a>
-        </li>
-        <li>
-          <a href="">dc</a>
-        </li>
-        <li>
-          <a href="">dc</a>
+        <li v-for="(link, i) in links" :key="i">
+          <a :href="link.url">{{ link.text }}</a>
+          <img :src="link.img" />
         </li>
       </ul>
     </div>
@@ -41,12 +28,19 @@ div {
     padding: 30px;
     @include center();
     gap: 30px;
+    li {
+      @include center();
+    }
     li a {
       display: inline-block;
       padding: 1rem;
       text-decoration: none;
-      font-weight: 300;
-      font-size: 20px;
+      font-weight: bold;
+      font-size: 10px;
+      color: white;
+    }
+    li img {
+      width: 40px;
     }
   }
 }
