@@ -1,93 +1,14 @@
 <script>
 export default {
   name: "ComicsList",
+  props: { comics: Array },
 };
 </script>
 <template>
   <div class="container">
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
-    </div>
-    <div class="card-comic">
-      <img
-        src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-        alt=""
-      />
-      <span class="title">Action comics</span>
+    <div v-for="(comic, i) in comics" :key="i" class="card-comic">
+      <img :src="comic.thumb" />
+      <span class="title">{{ comic.series }}</span>
     </div>
   </div>
 </template>

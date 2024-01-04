@@ -100,7 +100,7 @@ export default {
 
 <template>
   <DcJumbo />
-  <ComicsList />
+  <ComicsList :comics="comics" />
 </template>
 
 <style lang="scss" scoped>
