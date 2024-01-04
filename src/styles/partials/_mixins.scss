@@ -13,3 +13,11 @@
   display: flex;
   justify-content: space-between;
 }
+@mixin direction($type) {
+  display: flex;
+  @if $type== "column" {
+    flex-direction: column;
+  } @else if $type== "row" {
+    flex-direction: row;
+  }
+}
