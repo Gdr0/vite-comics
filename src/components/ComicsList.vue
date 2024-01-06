@@ -28,8 +28,12 @@ export default {
     }
     span {
       color: white;
-      font-size: 12px;
+      font-size: 15px;
       font-weight: bold;
+      margin-top: 10px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }

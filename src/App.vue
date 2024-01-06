@@ -2,11 +2,13 @@
 import AppHeader from "./components/AppHeader.vue";
 import ListProducts from "./components/ListProducts.vue";
 import DcElementsList from "./components/DcElementsList.vue";
+import AppFooter from "./components/AppFooter.vue";
 export default {
   components: {
     AppHeader,
     ListProducts,
     DcElementsList,
+    AppFooter,
   },
   data() {
     return {
@@ -98,6 +100,7 @@ export default {
   <AppHeader :links="menu" />
   <ListProducts />
   <DcElementsList :links="DCelements" />
+  <AppFooter />
 </template>
 
 <style lang="scss">
